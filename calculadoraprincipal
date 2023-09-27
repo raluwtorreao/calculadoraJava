@@ -1,0 +1,46 @@
+package calculadora;
+import java.util.Scanner;
+
+public class calculadoraprincipal {
+	public static void main(String[] args) {
+		Scanner leitura = new Scanner(System.in);
+		
+		System.out.print("Digite o primeiro número: ");
+        double num1 = leitura.nextDouble();
+        
+        System.out.print("Digite o primeiro número: ");
+        double num2 = leitura.nextDouble();
+        
+        System.out.println("Escolha a operação desejada: ");
+        System.out.println("Para Adição digite 1");
+        System.out.println("Para Subtração digite 2");
+        System.out.println("Para Multiplicação digite 3");
+        System.out.println("Para Divisão digite 4");
+
+        int operação = leitura.nextInt();
+
+        double resultado = 0;
+        
+        switch (operação) {
+        case 1:
+            resultado = opSoma.somar(num1, num2);
+            break;
+        case 2:
+            resultado = opSub.subtrair(num1, num2);
+            break;
+        case 3:
+            resultado = opMult.multiplicar(num1, num2);
+            break;
+        case 4:
+            resultado = opDiv.dividir(num1, num2);
+            break;
+        default:
+            System.out.println("Opção inexistente! Favor escolher novamente entre as operações apresentadas.");
+    }
+        
+        System.out.println("O resultado da operação é " + resultado);
+        
+        leitura.close();
+
+	}
+}
